@@ -18,7 +18,7 @@ stage('test') {
 	   }
    	post {
 		always {
-   		 archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
+   		 archiveArtifacts artifacts: 'Amazon-Core/target/**.jar', followSymlinks: false
     	 	}
 }
 
