@@ -2,13 +2,13 @@ pipeline {
 
 	agent any
 	tools {
- 		 maven 'm360'
+ 		 maven 'm398'
 		}
 
 	stages {
  	 stage('build') {
   	  steps {
-      	    sh 'mvn install -DskipTests'
+      	    sh 'mvn install'
   }
 }
 
@@ -19,8 +19,7 @@ stage('test') {
    	post {
 		always {
    		 archiveArtifacts artifacts: 'target/**.jar', followSymlinks: false
-    	 junit stdioRetention: '', testResults: 'target/surefire-reports/*.xml'
-	}
+    	 	}
 }
 
     }
