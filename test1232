@@ -1,8 +1,8 @@
 pipline{
 agent any
-   Stages{
+   Stages {
     stage('build'){
-      step  {sh 'echo hi'}
+      steps {sh 'echo hi'}
       }
      }
   }
